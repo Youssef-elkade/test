@@ -5,14 +5,13 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
 
+  base: '/test/', 
+
   css: {
     transformer: 'lightningcss',
     lightningcss: {
-      // هذا سيعمل بعد الترقية
       tailwind: {}, 
-
       drafts: {
-        // هذا يحل @custom-variant
         customMedia: true 
       }
     },
