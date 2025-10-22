@@ -5,17 +5,7 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
 
-  base: '/test/', 
-
-  css: {
-    transformer: 'lightningcss',
-    lightningcss: {
-      tailwind: {}, 
-      drafts: {
-        customMedia: true 
-      }
-    },
-  },
+  base: '/test/',
 
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -23,7 +13,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-
   build: {
     target: 'esnext',
     outDir: 'build',
